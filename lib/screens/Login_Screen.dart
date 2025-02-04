@@ -5,6 +5,7 @@ import 'package:google_sign_in/google_sign_in.dart';
 import 'package:flutter_facebook_auth/flutter_facebook_auth.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:mycalapp/screens/Home_Screen.dart';
+import 'package:mycalapp/screens/Register_Screen.dart';
 
 class Login_Screen extends StatefulWidget {
   const Login_Screen({super.key});
@@ -184,10 +185,16 @@ class _LoginScreenState extends State<Login_Screen> {
             ),
             SizedBox(height: 10),
             GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => RegisterPage()),
+                );
+              },
               child: Center(
                 child: Text(
                   "Belum Punya Akun? Daftar Disini",
-                  style: TextStyle(fontWeight: FontWeight.bold),
+                  style: TextStyle(fontWeight: FontWeight.bold, color: Colors.blue),
                 ),
               ),
             ),
