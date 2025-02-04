@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MyCalApp</string>
+    <string name="facebook_app_id">9273629126020693</string>
+    <string name="fb_login_protocol_scheme">fb9273629126020693</string>
+    <string name="facebook_client_token">8aec457fc8b43667e24a09ae3bd646f6</string>
+</resources>

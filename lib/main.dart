@@ -1,7 +1,20 @@
 import 'package:flutter/material.dart';
+import 'screens/Login_Screen.dart';
+import 'screens/Home_Screen.dart';
+import 'screens/Splash_Screen.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
+  runApp(MaterialApp(
+    home: SplashScreen(),
+    routes: {
+      '/login': (context) =>Login_Screen(),
+      '/home': (context) => Home_Screen(),
+    },
+  ));
 }
 
 class MyApp extends StatelessWidget {
